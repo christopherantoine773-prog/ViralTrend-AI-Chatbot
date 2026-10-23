@@ -1,1 +1,69 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b14">
+  <title>ViralTrend AI — Chat intelligent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">V<span>✦</span></div>
+        <div><strong>ViralTrend</strong><small>AI CHAT</small></div>
+      </div>
+      <button class="new-chat" id="newChat"><span>＋</span> Nouvelle discussion</button>
+      <div class="side-label">ESPACE</div>
+      <button class="side-link active"><span>◈</span> Assistant IA</button>
+      <button class="side-link" id="historyBtn"><span>◷</span> Historique récent</button>
+      <div class="history-list" id="historyList"></div>
+      <div class="sidebar-bottom">
+        <div class="status-dot"></div>
+        <div><strong>ViralTrend AI</strong><small>Assistant conversationnel</small></div>
+      </div>
+    </aside>
 
+    <main class="main">
+      <header class="topbar">
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Ouvrir le menu">☰</button>
+        <div class="top-title"><span class="online-dot"></span> Assistant IA <span class="beta">BETA</span></div>
+        <button class="icon-btn" id="clearBtn" title="Effacer la conversation" aria-label="Effacer la conversation">⟲</button>
+      </header>
+
+      <section class="chat-area" id="chatArea">
+        <div class="welcome" id="welcome">
+          <div class="hero-orb"><div class="orb-core">✦</div><span class="orb-ring ring-one"></span><span class="orb-ring ring-two"></span></div>
+          <div class="eyebrow">TON ASSISTANT INTELLIGENT</div>
+          <h1>Salut, prêt à<br><span>explorer des idées ?</span></h1>
+          <p>Pose tes questions, apprends quelque chose ou donne vie à tes idées. On commence quand tu veux.</p>
+          <div class="suggestions">
+            <button class="suggestion" data-prompt="Explique-moi un sujet difficile avec des mots simples."><span class="s-icon purple">✧</span><span><strong>Explique-moi un sujet</strong><small>Comprendre étape par étape</small></span><span class="arrow">↗</span></button>
+            <button class="suggestion" data-prompt="Aide-moi à écrire un texte clair et intéressant."><span class="s-icon blue">✎</span><span><strong>Écrire un texte</strong><small>Messages, devoirs, descriptions</small></span><span class="arrow">↗</span></button>
+            <button class="suggestion" data-prompt="Donne-moi cinq idées originales pour un projet créatif."><span class="s-icon pink">✦</span><span><strong>Trouver des idées</strong><small>Créativité et inspiration</small></span><span class="arrow">↗</span></button>
+            <button class="suggestion" data-prompt="Ann pale an kreyòl ayisyen. Kijan ou ka ede m jodi a?"><span class="s-icon green">◉</span><span><strong>Ann pale kreyòl</strong><small>Diskite an kreyòl ayisyen</small></span><span class="arrow">↗</span></button>
+          </div>
+        </div>
+        <div class="messages" id="messages" aria-live="polite"></div>
+      </section>
+
+      <footer class="composer-wrap">
+        <form class="composer" id="chatForm">
+          <textarea id="messageInput" rows="1" maxlength="6000" placeholder="Écris ton message ici…" aria-label="Ton message"></textarea>
+          <div class="composer-bottom">
+            <span class="hint"><span>✦</span> L’IA peut parfois se tromper. Vérifie les informations importantes.</span>
+            <button class="send-btn" id="sendBtn" type="submit"><span>Envoyer</span><span class="send-icon">↑</span></button>
+          </div>
+        </form>
+        <div class="footer-note">Propulsé par une API d’IA · Tes messages sont envoyés au serveur pour générer les réponses.</div>
+      </footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
